@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Posts
+{% endblock %}
+
+{% block main %}
+    <table class="table text-left">
+        {% if lengthOfPosts != 0 %}
+            <thead>
+                <tr>
+                    <th>Posts</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in posts %}
+                    <tr>
+                        <td>Name: {{ row[1] }}</td>
+                        <td>Contact: {{ row[2] }}</td>
+                        <td>Title: {{ row[3] }}</td>
+                        <td>Description: {{ row[4] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        {% else %}
+            <p>No posts to show</p>
+        {% endif %}
+    </table>
+{% endblock %}
