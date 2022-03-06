@@ -9,4 +9,4 @@ To test the website, clone this repository and install the following packages:
   - **Flask 1.1.2**
   - **SQLite 3.32.3**
 
-Then, open the folder directory in a terminal/command prompt and type **flask run** to run the website!
+Then, open the folder directory in a terminal/command prompt and type **"flask run"** to run the website!
