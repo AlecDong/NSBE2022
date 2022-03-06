@@ -8,17 +8,23 @@
     <table class="table text-left">
         {% if lengthOfPosts != 0 %}
             <thead>
-                <tr>
-                    <th>Posts</th>
-                </tr>
+                <h1>All Posts</h1>
             </thead>
             <tbody>
+                <tr>
+                    <td><h5>Name: </h5></td>
+                    <td><h5>Age: </h5></td>
+                    <td><h5>Contact: </h5></td>
+                    <td><h5>Title: </h5></td>
+                    <td><h5>Description: </h5></td>
+                </tr>
                 {% for row in posts %}
                     <tr>
-                        <td>Name: {{ row[1] }}</td>
-                        <td>Contact: {{ row[2] }}</td>
-                        <td>Title: {{ row[3] }}</td>
-                        <td>Description: {{ row[4] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{{ row[4] }}</td>
+                        <td>{{ row[5] }}</td>
                     </tr>
                 {% endfor %}
             </tbody>

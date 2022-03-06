@@ -18,7 +18,7 @@ def home():
 
 @app.route("/posts")
 def posts():
-    with sqlite3.connect("example.db") as con:
+    with sqlite3.connect("connect.db") as con:
             cur = con.cursor()
             cur.execute("select * from posts")
             posts = cur.fetchall()
@@ -28,13 +28,14 @@ def posts():
 @app.route("/create", methods=["GET", "POST"])
 def create_post():
     if request.method == "POST":
-        with sqlite3.connect("example.db") as con:
+        with sqlite3.connect("connect.db") as con:
             cur = con.cursor()
             name = request.form.get("name").strip()
+            age = request.form.get("age")
             contact = request.form.get("contact").strip()
             title = request.form.get("title").strip()
             description = request.form.get("description").strip()
-            cur.execute("insert into posts (name, contact, title, description) values(?, ?, ?, ?)", (name, contact, title, description))
+            cur.execute("insert into posts (name, age, contact, title, description) values(?, ?, ?, ?, ?)", (name, age, contact, title, description))
             con.commit()
         flash("Posted!")
         return redirect("/posts")
