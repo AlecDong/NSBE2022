@@ -8,6 +8,14 @@ h1 {
     padding: 20px !important;
 }
 
+#home {
+    max-width: 20%;
+}
+
+#logo {
+    max-width: 100%;
+}
+
 #intro {
     justify-content: space-between;
     display: flex;
