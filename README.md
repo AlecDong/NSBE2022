@@ -7,6 +7,7 @@ The website, constructed using a combination of Python, HTML, CSS, and other too
 
 To test the website, clone this repository and install the following packages: 
   - **Flask 1.1.2**
+  - **Flask-Session 0.4.0**
   - **SQLite 3.35.5**
 
 Then, open the folder directory in a terminal/command prompt and type **"flask run"** to run the website!
