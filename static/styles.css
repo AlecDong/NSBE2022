@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+    padding: 20px !important;
+}
+
+#intro {
+    justify-content: space-between;
+    display: flex;
+}
+
+#goal {
+    width: 49%;
+    float: left;
+    padding: 20px;
+    background-color: rgb(184, 184, 184);
+}
+
+img {
+    max-width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    padding-bottom: 10px;
+}
